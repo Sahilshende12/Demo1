@@ -1,0 +1,484 @@
+Microsoft Windows [Version 10.0.26100.3775]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Admin>ansible --version
+'ansible' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Admin>wsl -l -v
+  NAME              STATE           VERSION
+* docker-desktop    Stopped         2
+  Ubuntu            Stopped         2
+  Ubuntu-22.04      Stopped         2
+
+C:\Users\Admin>wsl -d Ubuntu-22.04
+Welcome to Ubuntu 22.04.5 LTS (GNU/Linux 5.15.167.4-microsoft-standard-WSL2 x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Sat Apr 19 09:44:08 IST 2025
+
+  System load:  0.0                 Processes:             73
+  Usage of /:   0.2% of 1006.85GB   Users logged in:       0
+  Memory usage: 12%                 IPv4 address for eth0: 172.19.160.226
+  Swap usage:   0%
+
+
+This message is shown once a day. To disable it please create the
+/home/bvimit/.hushlogin file.
+bvimit@IMITNM-DES-0020:/mnt/c/Users/Admin$ sudo apt update && sudo apt upgrade -y
+[sudo] password for bvimit:
+Sorry, try again.
+[sudo] password for bvimit:
+Get:1 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
+Get:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Get:4 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [2222 kB]
+Get:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
+Get:6 http://security.ubuntu.com/ubuntu jammy-security/main Translation-en [342 kB]
+Get:7 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [3145 kB]
+Get:8 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [2499 kB]
+Get:9 http://security.ubuntu.com/ubuntu jammy-security/restricted Translation-en [558 kB]
+Get:10 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [972 kB]
+Get:11 http://security.ubuntu.com/ubuntu jammy-security/universe Translation-en [209 kB]
+Get:12 http://archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [409 kB]
+Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [3336 kB]
+Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/restricted Translation-en [592 kB]
+Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1200 kB]
+Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/universe Translation-en [296 kB]
+Get:17 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [30.0 kB]
+Get:18 http://archive.ubuntu.com/ubuntu jammy-backports/universe Translation-en [16.5 kB]
+Fetched 16.2 MB in 25s (642 kB/s)
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+17 packages can be upgraded. Run 'apt list --upgradable' to see them.
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+Get another security update through Ubuntu Pro with 'esm-apps' enabled:
+  ansible
+Learn more about Ubuntu Pro at https://ubuntu.com/pro
+The following packages will be upgraded:
+  binutils binutils-common binutils-x86-64-linux-gnu libbinutils libctf-nobfd0 libctf0 libexpat1 libperl5.34 pci.ids
+  perl perl-base perl-modules-5.34 vim vim-common vim-runtime vim-tiny xxd
+17 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+16 standard LTS security updates
+Need to get 23.0 MB of archives.
+After this operation, 6144 B of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libperl5.34 amd64 5.34.0-3ubuntu1.4 [4820 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 perl amd64 5.34.0-3ubuntu1.4 [232 kB]
+Get:3 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 perl-base amd64 5.34.0-3ubuntu1.4 [1759 kB]
+Get:4 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 perl-modules-5.34 all 5.34.0-3ubuntu1.4 [2977 kB]
+Get:5 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libexpat1 amd64 2.4.7-1ubuntu0.6 [92.1 kB]
+Get:6 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 vim amd64 2:8.2.3995-1ubuntu2.24 [1728 kB]
+Get:7 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 vim-tiny amd64 2:8.2.3995-1ubuntu2.24 [707 kB]
+Get:8 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 vim-runtime all 2:8.2.3995-1ubuntu2.24 [6833 kB]
+Get:9 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 xxd amd64 2:8.2.3995-1ubuntu2.24 [51.4 kB]
+Get:10 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 vim-common all 2:8.2.3995-1ubuntu2.24 [81.5 kB]
+Get:11 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 pci.ids all 0.0~2022.01.22-1ubuntu0.1 [251 kB]
+Get:12 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libctf0 amd64 2.38-4ubuntu2.8 [103 kB]
+Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libctf-nobfd0 amd64 2.38-4ubuntu2.8 [108 kB]
+Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 binutils-x86-64-linux-gnu amd64 2.38-4ubuntu2.8 [2324 kB]
+Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libbinutils amd64 2.38-4ubuntu2.8 [661 kB]
+Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 binutils amd64 2.38-4ubuntu2.8 [3196 B]
+Get:17 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 binutils-common amd64 2.38-4ubuntu2.8 [223 kB]
+Fetched 23.0 MB in 19s (1234 kB/s)
+(Reading database ... 81156 files and directories currently installed.)
+Preparing to unpack .../libperl5.34_5.34.0-3ubuntu1.4_amd64.deb ...
+Unpacking libperl5.34:amd64 (5.34.0-3ubuntu1.4) over (5.34.0-3ubuntu1.3) ...
+Preparing to unpack .../perl_5.34.0-3ubuntu1.4_amd64.deb ...
+Unpacking perl (5.34.0-3ubuntu1.4) over (5.34.0-3ubuntu1.3) ...
+Preparing to unpack .../perl-base_5.34.0-3ubuntu1.4_amd64.deb ...
+Unpacking perl-base (5.34.0-3ubuntu1.4) over (5.34.0-3ubuntu1.3) ...
+Setting up perl-base (5.34.0-3ubuntu1.4) ...
+(Reading database ... 81156 files and directories currently installed.)
+Preparing to unpack .../00-perl-modules-5.34_5.34.0-3ubuntu1.4_all.deb ...
+Unpacking perl-modules-5.34 (5.34.0-3ubuntu1.4) over (5.34.0-3ubuntu1.3) ...
+Preparing to unpack .../01-libexpat1_2.4.7-1ubuntu0.6_amd64.deb ...
+Unpacking libexpat1:amd64 (2.4.7-1ubuntu0.6) over (2.4.7-1ubuntu0.5) ...
+Preparing to unpack .../02-vim_2%3a8.2.3995-1ubuntu2.24_amd64.deb ...
+Unpacking vim (2:8.2.3995-1ubuntu2.24) over (2:8.2.3995-1ubuntu2.23) ...
+Preparing to unpack .../03-vim-tiny_2%3a8.2.3995-1ubuntu2.24_amd64.deb ...
+Unpacking vim-tiny (2:8.2.3995-1ubuntu2.24) over (2:8.2.3995-1ubuntu2.23) ...
+Preparing to unpack .../04-vim-runtime_2%3a8.2.3995-1ubuntu2.24_all.deb ...
+Unpacking vim-runtime (2:8.2.3995-1ubuntu2.24) over (2:8.2.3995-1ubuntu2.23) ...
+Preparing to unpack .../05-xxd_2%3a8.2.3995-1ubuntu2.24_amd64.deb ...
+Unpacking xxd (2:8.2.3995-1ubuntu2.24) over (2:8.2.3995-1ubuntu2.23) ...
+Preparing to unpack .../06-vim-common_2%3a8.2.3995-1ubuntu2.24_all.deb ...
+Unpacking vim-common (2:8.2.3995-1ubuntu2.24) over (2:8.2.3995-1ubuntu2.23) ...
+Preparing to unpack .../07-pci.ids_0.0~2022.01.22-1ubuntu0.1_all.deb ...
+Unpacking pci.ids (0.0~2022.01.22-1ubuntu0.1) over (0.0~2022.01.22-1) ...
+Preparing to unpack .../08-libctf0_2.38-4ubuntu2.8_amd64.deb ...
+Unpacking libctf0:amd64 (2.38-4ubuntu2.8) over (2.38-4ubuntu2.7) ...
+Preparing to unpack .../09-libctf-nobfd0_2.38-4ubuntu2.8_amd64.deb ...
+Unpacking libctf-nobfd0:amd64 (2.38-4ubuntu2.8) over (2.38-4ubuntu2.7) ...
+Preparing to unpack .../10-binutils-x86-64-linux-gnu_2.38-4ubuntu2.8_amd64.deb ...
+Unpacking binutils-x86-64-linux-gnu (2.38-4ubuntu2.8) over (2.38-4ubuntu2.7) ...
+Preparing to unpack .../11-libbinutils_2.38-4ubuntu2.8_amd64.deb ...
+Unpacking libbinutils:amd64 (2.38-4ubuntu2.8) over (2.38-4ubuntu2.7) ...
+Preparing to unpack .../12-binutils_2.38-4ubuntu2.8_amd64.deb ...
+Unpacking binutils (2.38-4ubuntu2.8) over (2.38-4ubuntu2.7) ...
+Preparing to unpack .../13-binutils-common_2.38-4ubuntu2.8_amd64.deb ...
+Unpacking binutils-common:amd64 (2.38-4ubuntu2.8) over (2.38-4ubuntu2.7) ...
+Setting up libexpat1:amd64 (2.4.7-1ubuntu0.6) ...
+Setting up pci.ids (0.0~2022.01.22-1ubuntu0.1) ...
+Setting up binutils-common:amd64 (2.38-4ubuntu2.8) ...
+Setting up libctf-nobfd0:amd64 (2.38-4ubuntu2.8) ...
+Setting up perl-modules-5.34 (5.34.0-3ubuntu1.4) ...
+Setting up xxd (2:8.2.3995-1ubuntu2.24) ...
+Setting up vim-common (2:8.2.3995-1ubuntu2.24) ...
+Setting up libbinutils:amd64 (2.38-4ubuntu2.8) ...
+Setting up vim-runtime (2:8.2.3995-1ubuntu2.24) ...
+Setting up libctf0:amd64 (2.38-4ubuntu2.8) ...
+Setting up libperl5.34:amd64 (5.34.0-3ubuntu1.4) ...
+Setting up vim (2:8.2.3995-1ubuntu2.24) ...
+Setting up vim-tiny (2:8.2.3995-1ubuntu2.24) ...
+Setting up perl (5.34.0-3ubuntu1.4) ...
+Setting up binutils-x86-64-linux-gnu (2.38-4ubuntu2.8) ...
+Setting up binutils (2.38-4ubuntu2.8) ...
+Processing triggers for hicolor-icon-theme (0.17-2) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.9) ...
+Processing triggers for man-db (2.10.2-1) ...
+bvimit@IMITNM-DES-0020:/mnt/c/Users/Admin$ sudo apt install ansible -y
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+ansible is already the newest version (2.10.7+merged+base+2.10.8+dfsg-1).
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+bvimit@IMITNM-DES-0020:/mnt/c/Users/Admin$ ls
+'3D Objects'
+'AIML lab 1 A38 Prathm.ipynb'
+ AndroidStudioProjects
+ AppData
+'Application Data'
+ Contacts
+ Cookies
+ CreditRisk.csv
+ Desktop
+ Dockerfile
+ Documents
+ Downloads
+ EmpDB.mdf
+ EmpDB_log.ldf
+ Favorites
+ IPL_2023_Auction_Sold.csv
+ Jedi
+ Links
+'Local Settings'
+ Microsoft
+ Music
+'My Documents'
+ NTUSER.DAT
+ NTUSER.DAT{5d4b6f56-f59f-11ef-ace4-db2a3cf3ad73}.TxR.0.regtrans-ms
+ NTUSER.DAT{5d4b6f56-f59f-11ef-ace4-db2a3cf3ad73}.TxR.1.regtrans-ms
+ NTUSER.DAT{5d4b6f56-f59f-11ef-ace4-db2a3cf3ad73}.TxR.2.regtrans-ms
+ NTUSER.DAT{5d4b6f56-f59f-11ef-ace4-db2a3cf3ad73}.TxR.blf
+ NTUSER.DAT{5d4b6f57-f59f-11ef-ace4-db2a3cf3ad73}.TM.blf
+ NTUSER.DAT{5d4b6f57-f59f-11ef-ace4-db2a3cf3ad73}.TMContainer00000000000000000001.regtrans-ms
+ NTUSER.DAT{5d4b6f57-f59f-11ef-ace4-db2a3cf3ad73}.TMContainer00000000000000000002.regtrans-ms
+ NetHood
+'New folder'
+ OneDrive
+ Oracle
+ Pictures
+ Postman
+ PracticalsAIML.ipynb
+ PrintHood
+ PythonBasics.ipynb
+ Recent
+'Saved Games'
+ Searches
+ SendTo
+'Start Menu'
+ StudTable.mdf
+ StudTable_log.ldf
+ StudentDB.mdf
+ StudentDB_log.ldf
+ Templates
+ Trial2.txt
+ Untitled-1.txt
+ Untitled.ipynb
+ Untitled1.ipynb
+ Untitled10.ipynb
+ Untitled11.ipynb
+ Untitled12.ipynb
+ Untitled13.ipynb
+ Untitled14.ipynb
+ Untitled15.ipynb
+ Untitled16.ipynb
+ Untitled17.ipynb
+ Untitled18.ipynb
+ Untitled19.ipynb
+ Untitled2.ipynb
+ Untitled20.ipynb
+ Untitled21.ipynb
+ Untitled22.ipynb
+ Untitled23.ipynb
+ Untitled24.ipynb
+ Untitled25.ipynb
+ Untitled26.ipynb
+ Untitled27.ipynb
+ Untitled28.ipynb
+ Untitled29.ipynb
+ Untitled3.ipynb
+ Untitled30.ipynb
+ Untitled4.ipynb
+ Untitled5.ipynb
+ Untitled6-Copy1.ipynb
+ Untitled6.ipynb
+ Untitled7.ipynb
+ Untitled8.ipynb
+ Untitled9.ipynb
+ Videos
+'VirtualBox VMs'
+ abc
+ anaconda3
+ credit_risk_dataset.csv
+ db.mdf
+ db_log.ldf
+ demo
+ do.txt
+ driver-data.csv
+ eclipse
+ eclipse-workspace
+ edb_languagepack_4.exe
+ edb_mtk.exe
+ edb_npgsql.exe
+ edb_pem_agent_8.exe
+ edb_pgagent_pg13.exe
+ edb_pgagent_pg16.exe
+ edb_pgbouncer.exe
+ edb_pgbouncer.exe-20241003134101
+ edb_pgjdbc.exe
+ edb_pgjdbc.exe-20241003134136
+ edb_psqlodbc.exe
+ edb_psqlodbc.exe-20240120111053
+ edb_psqlodbc.exe-20241003134148
+ edb_psqlodbc.exe-20241003134205
+ edb_psqlodbc.exe-20241003141216
+ edb_psqlodbc.exe-20241003141233
+ edb_sqlprotect_pg16.exe
+ edb_xdb_62.exe
+ exam
+ example.js
+ make.txt
+ mca
+ node_modules
+ ntuser.dat.LOG1
+ ntuser.dat.LOG2
+ ntuser.ini
+'numpy multidimesiopn_A20.ipynb'
+ package-lock.json
+ package.json
+ pandas_earth_quake_A20.ipynb
+ patil1_demo
+ patil2.demo
+ patil_demo
+ pemhttpd.exe
+ pemhttpd.exe-20241003134424
+ pemhttpd.exe-20241003141252
+ pemhttpd.exe-20241003141328
+'plotting graphs.ipynb'
+ postgis_3_4_pg16.exe
+ postgresql_12.exe
+ postgresql_12.exe-20241003135038
+ postgresql_13.exe
+ postgresql_14.exe
+ postgresql_14.exe-20241003135538
+ postgresql_15.exe
+ postgresql_15.exe-20241003140044
+ postgresql_16.exe
+ postgresql_17.exe
+ project_demo
+ seaborn-data
+ sem2-project
+ source
+ untitled.txt
+bvimit@IMITNM-DES-0020:/mnt/c/Users/Admin$ mkdir -p /etc/ansible
+bvimit@IMITNM-DES-0020:/mnt/c/Users/Admin$ sudo vi /etc/ansible/hosts
+bvimit@IMITNM-DES-0020:/mnt/c/Users/Admin$ sudo vi /etc/ansible/hosts
+bvimit@IMITNM-DES-0020:/mnt/c/Users/Admin$ ansible local -m ping
+[WARNING]:  * Failed to parse /etc/ansible/hosts with yaml plugin: We were unable to read either as JSON nor YAML,
+these are the errors we got from each: JSON: Expecting value: line 1 column 2 (char 1)  Syntax Error while loading
+YAML.   did not find expected <document start>  The error appears to be in '/etc/ansible/hosts': line 2, column 1, but
+may be elsewhere in the file depending on the exact syntax problem.  The offending line appears to be:  [local]
+localhost ansible_connection = local ^ here
+[WARNING]:  * Failed to parse /etc/ansible/hosts with ini plugin: /etc/ansible/hosts:2: Expected key=value host
+variable assignment, got: ansible_connection
+[WARNING]: Unable to parse /etc/ansible/hosts as an inventory source
+[WARNING]: No inventory was parsed, only implicit localhost is available
+[WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match
+'all'
+bvimit@IMITNM-DES-0020:/mnt/c/Users/Admin$ sudo vi /etc/ansible/hosts
+bvimit@IMITNM-DES-0020:/mnt/c/Users/Admin$ ansible local -m ping
+localhost | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+bvimit@IMITNM-DES-0020:/mnt/c/Users/Admin$ sudo vi /etc/ansible/hosts
+bvimit@IMITNM-DES-0020:/mnt/c/Users/Admin$ ansible local -m shell -a "whoami"
+localhost | CHANGED | rc=0 >>
+bvimit
+bvimit@IMITNM-DES-0020:/mnt/c/Users/Admin$ ansible local -m shell -a "ls -la /home/$USER"
+localhost | CHANGED | rc=0 >>
+total 48
+drwxr-x--- 6 bvimit bvimit 4096 Apr 19 09:44 .
+drwxr-xr-x 3 root   root   4096 Apr  7 13:29 ..
+drwxr-xr-x 3 bvimit bvimit 4096 Apr  7 13:34 .ansible
+-rw------- 1 bvimit bvimit 1446 Apr  7 14:50 .bash_history
+-rw-r--r-- 1 bvimit bvimit  220 Apr  7 13:29 .bash_logout
+-rw-r--r-- 1 bvimit bvimit 3771 Apr  7 13:29 .bashrc
+drwx------ 2 bvimit bvimit 4096 Apr  7 13:30 .cache
+drwxr-xr-x 2 bvimit bvimit 4096 Apr 19 09:44 .landscape
+-rw-r--r-- 1 bvimit bvimit    0 Apr 19 09:44 .motd_shown
+-rw-r--r-- 1 bvimit bvimit  807 Apr  7 13:29 .profile
+-rw-r--r-- 1 bvimit bvimit    0 Apr  7 13:31 .sudo_as_admin_successful
+-rw------- 1 bvimit bvimit 2315 Apr  7 14:43 .viminfo
+drwxr-xr-x 2 bvimit bvimit 4096 Apr  7 13:50 Aniket
+-rw-r--r-- 1 bvimit bvimit  133 Apr  7 14:43 firstplaybook.yml
+bvimit@IMITNM-DES-0020:/mnt/c/Users/Admin$ ansible local -m shell -a "echo 'Hello' > /tmp/hello.txt"
+localhost | CHANGED | rc=0 >>
+
+bvimit@IMITNM-DES-0020:/mnt/c/Users/Admin$ ansible local -m shell -a "ls -l /tmp"
+localhost | CHANGED | rc=0 >>
+total 24
+drwx------ 2 bvimit bvimit 4096 Apr 19 10:29 ansible_ansible.legacy.command_payload_mr07slpn
+-rw-r--r-- 1 bvimit bvimit    6 Apr 19 10:27 hello.txt
+drwx------ 2 root   root   4096 Apr 19 09:44 snap-private-tmp
+drwx------ 3 root   root   4096 Apr 19 09:44 systemd-private-023f08cbd2b1437aae7c630ea8423862-systemd-logind.service-jwAjh5
+drwx------ 3 root   root   4096 Apr 19 09:44 systemd-private-023f08cbd2b1437aae7c630ea8423862-systemd-resolved.service-7TSuus
+drwx------ 3 root   root   4096 Apr 19 09:44 systemd-private-023f08cbd2b1437aae7c630ea8423862-systemd-timesyncd.service-IW5aiF
+bvimit@IMITNM-DES-0020:/mnt/c/Users/Admin$ ansible local -m shell -a "ls -l /tmp | grep hello"
+localhost | CHANGED | rc=0 >>
+-rw-r--r-- 1 bvimit bvimit    6 Apr 19 10:27 hello.txt
+bvimit@IMITNM-DES-0020:/mnt/c/Users/Admin$ ansible local -m command -a "uptime"
+localhost | CHANGED | rc=0 >>
+ 10:34:06 up 54 min,  1 user,  load average: 0.05, 0.04, 0.00
+bvimit@IMITNM-DES-0020:/mnt/c/Users/Admin$ ansible local -m command -a "cat /etc/os-release"
+localhost | CHANGED | rc=0 >>
+PRETTY_NAME="Ubuntu 22.04.5 LTS"
+NAME="Ubuntu"
+VERSION_ID="22.04"
+VERSION="22.04.5 LTS (Jammy Jellyfish)"
+VERSION_CODENAME=jammy
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=jammy
+bvimit@IMITNM-DES-0020:/mnt/c/Users/Admin$ ansible local -m apt -a "name=nginx state=present" -b
+localhost | FAILED! => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "module_stderr": "sudo: a password is required\n",
+    "module_stdout": "",
+    "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error",
+    "rc": 1
+}
+bvimit@IMITNM-DES-0020:/mnt/c/Users/Admin$ ansible local -m apt -a "name=nginx state=present" -b --ask-become-pass
+BECOME password:
+localhost | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "cache_update_time": 1745036120,
+    "cache_updated": false,
+    "changed": false
+}
+bvimit@IMITNM-DES-0020:/mnt/c/Users/Admin$ ansible local -m shell -a "dpkg -l | grep nginx"
+localhost | CHANGED | rc=0 >>
+ii  libnginx-mod-http-geoip2       1.18.0-6ubuntu14.6                      amd64        GeoIP2 HTTP module for Nginx
+ii  libnginx-mod-http-image-filter 1.18.0-6ubuntu14.6                      amd64        HTTP image filter module for Nginx
+ii  libnginx-mod-http-xslt-filter  1.18.0-6ubuntu14.6                      amd64        XSLT Transformation module for Nginx
+ii  libnginx-mod-mail              1.18.0-6ubuntu14.6                      amd64        Mail module for Nginx
+ii  libnginx-mod-stream            1.18.0-6ubuntu14.6                      amd64        Stream module for Nginx
+ii  libnginx-mod-stream-geoip2     1.18.0-6ubuntu14.6                      amd64        GeoIP2 Stream module for Nginx
+ii  nginx                          1.18.0-6ubuntu14.6                      amd64        small, powerful, scalable web/proxy server
+ii  nginx-common                   1.18.0-6ubuntu14.6                      all          small, powerful, scalable web/proxy server - common files
+ii  nginx-core                     1.18.0-6ubuntu14.6                      amd64        nginx web/proxy server (standard version)
+bvimit@IMITNM-DES-0020:/mnt/c/Users/Admin$ ansible local -m apt -a "name=nginx state=absent" -b
+localhost | CHANGED => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": true,
+    "stderr": "",
+    "stderr_lines": [],
+    "stdout": "Reading package lists...\nBuilding dependency tree...\nReading state information...\nThe following packages were automatically installed and are no longer required:\n  libgd3 libnginx-mod-http-geoip2 libnginx-mod-http-image-filter\n  libnginx-mod-http-xslt-filter libnginx-mod-mail libnginx-mod-stream\n  libnginx-mod-stream-geoip2 libxpm4 libxslt1.1 nginx-common nginx-core\nUse 'sudo apt autoremove' to remove them.\nThe following packages will be REMOVED:\n  nginx\n0 upgraded, 0 newly installed, 1 to remove and 0 not upgraded.\nAfter this operation, 50.2 kB disk space will be freed.\n(Reading database ... \r(Reading database ... 5%\r(Reading database ... 10%\r(Reading database ... 15%\r(Reading database ... 20%\r(Reading database ... 25%\r(Reading database ... 30%\r(Reading database ... 35%\r(Reading database ... 40%\r(Reading database ... 45%\r(Reading database ... 50%\r(Reading database ... 55%\r(Reading database ... 60%\r(Reading database ... 65%\r(Reading database ... 70%\r(Reading database ... 75%\r(Reading database ... 80%\r(Reading database ... 85%\r(Reading database ... 90%\r(Reading database ... 95%\r(Reading database ... 100%\r(Reading database ... 81156 files and directories currently installed.)\r\nRemoving nginx (1.18.0-6ubuntu14.6) ...\r\n",
+    "stdout_lines": [
+        "Reading package lists...",
+        "Building dependency tree...",
+        "Reading state information...",
+        "The following packages were automatically installed and are no longer required:",
+        "  libgd3 libnginx-mod-http-geoip2 libnginx-mod-http-image-filter",
+        "  libnginx-mod-http-xslt-filter libnginx-mod-mail libnginx-mod-stream",
+        "  libnginx-mod-stream-geoip2 libxpm4 libxslt1.1 nginx-common nginx-core",
+        "Use 'sudo apt autoremove' to remove them.",
+        "The following packages will be REMOVED:",
+        "  nginx",
+        "0 upgraded, 0 newly installed, 1 to remove and 0 not upgraded.",
+        "After this operation, 50.2 kB disk space will be freed.",
+        "(Reading database ... ",
+        "(Reading database ... 5%",
+        "(Reading database ... 10%",
+        "(Reading database ... 15%",
+        "(Reading database ... 20%",
+        "(Reading database ... 25%",
+        "(Reading database ... 30%",
+        "(Reading database ... 35%",
+        "(Reading database ... 40%",
+        "(Reading database ... 45%",
+        "(Reading database ... 50%",
+        "(Reading database ... 55%",
+        "(Reading database ... 60%",
+        "(Reading database ... 65%",
+        "(Reading database ... 70%",
+        "(Reading database ... 75%",
+        "(Reading database ... 80%",
+        "(Reading database ... 85%",
+        "(Reading database ... 90%",
+        "(Reading database ... 95%",
+        "(Reading database ... 100%",
+        "(Reading database ... 81156 files and directories currently installed.)",
+        "Removing nginx (1.18.0-6ubuntu14.6) ..."
+    ]
+}
+bvimit@IMITNM-DES-0020:/mnt/c/Users/Admin$ ansible local -m user -a "name=testuser state=present" -b
+localhost | CHANGED => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": true,
+    "comment": "",
+    "create_home": true,
+    "group": 1001,
+    "home": "/home/testuser",
+    "name": "testuser",
+    "shell": "/bin/sh",
+    "state": "present",
+    "system": false,
+    "uid": 1001
+}
+bvimit@IMITNM-DES-0020:/mnt/c/Users/Admin$ ansible local -m user -a "name=testuser state=present" -b
+localhost | FAILED! => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "module_stderr": "sudo: a password is required\n",
+    "module_stdout": "",
+    "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error",
+    "rc": 1
+}
+bvimit@IMITNM-DES-0020:/mnt/c/Users/Admin$

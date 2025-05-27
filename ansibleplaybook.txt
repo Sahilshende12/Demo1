@@ -1,0 +1,325 @@
+Welcome to Ubuntu 24.04.2 LTS (GNU/Linux 5.15.167.4-microsoft-standard-WSL2 x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Thu Apr 24 10:59:56 UTC 2025
+
+  System load:  0.0                 Processes:             69
+  Usage of /:   0.2% of 1006.85GB   Users logged in:       0
+  Memory usage: 11%                 IPv4 address for eth0: 172.19.160.226
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+This message is shown once a day. To disable it please create the
+/home/bvimit/.hushlogin file.
+bvimit@IMITNM-DES-0020:~$ mkdir mansi36
+bvimit@IMITNM-DES-0020:~$ ls
+ansible-web-demo  cd  mansi36  pri
+bvimit@IMITNM-DES-0020:~$ cd mansi36
+bvimit@IMITNM-DES-0020:~/mansi36$ sudo apt install openjdk-21-jdk-headless
+[sudo] password for bvimit:
+Sorry, try again.
+[sudo] password for bvimit:
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  alsa-topology-conf alsa-ucm-conf ca-certificates-java java-common libasound2-data libasound2t64 libnspr4 libnss3 libpcsclite1 openjdk-21-jre-headless
+Suggested packages:
+  default-jre alsa-utils libasound2-plugins pcscd openjdk-21-demo openjdk-21-source libnss-mdns fonts-dejavu-extra fonts-ipafont-gothic
+  fonts-ipafont-mincho fonts-wqy-microhei | fonts-wqy-zenhei fonts-indic
+The following NEW packages will be installed:
+  alsa-topology-conf alsa-ucm-conf ca-certificates-java java-common libasound2-data libasound2t64 libnspr4 libnss3 libpcsclite1 openjdk-21-jdk-headless
+  openjdk-21-jre-headless
+0 upgraded, 11 newly installed, 0 to remove and 0 not upgraded.
+Need to get 131 MB of archives.
+After this operation, 306 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://archive.ubuntu.com/ubuntu noble/main amd64 alsa-topology-conf all 1.2.5.1-2 [15.5 kB]
+Get:2 http://archive.ubuntu.com/ubuntu noble/main amd64 libasound2-data all 1.2.11-1build2 [21.0 kB]
+Get:3 http://archive.ubuntu.com/ubuntu noble/main amd64 libasound2t64 amd64 1.2.11-1build2 [399 kB]
+Get:4 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 alsa-ucm-conf all 1.2.10-1ubuntu5.4 [64.8 kB]
+Get:5 http://archive.ubuntu.com/ubuntu noble/main amd64 ca-certificates-java all 20240118 [11.6 kB]
+Get:6 http://archive.ubuntu.com/ubuntu noble/main amd64 java-common all 0.75+exp1 [6798 B]
+Get:7 http://archive.ubuntu.com/ubuntu noble/main amd64 libnspr4 amd64 2:4.35-1.1build1 [117 kB]
+Get:8 http://archive.ubuntu.com/ubuntu noble/main amd64 libnss3 amd64 2:3.98-1build1 [1445 kB]
+Get:9 http://archive.ubuntu.com/ubuntu noble/main amd64 libpcsclite1 amd64 2.0.3-1build1 [21.4 kB]
+Get:10 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openjdk-21-jre-headless amd64 21.0.6+7-1~24.04.1 [46.4 MB]
+Get:11 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openjdk-21-jdk-headless amd64 21.0.6+7-1~24.04.1 [82.6 MB]
+Fetched 131 MB in 1min 47s (1223 kB/s)
+Selecting previously unselected package alsa-topology-conf.
+(Reading database ... 64718 files and directories currently installed.)
+Preparing to unpack .../00-alsa-topology-conf_1.2.5.1-2_all.deb ...
+Unpacking alsa-topology-conf (1.2.5.1-2) ...
+Selecting previously unselected package libasound2-data.
+Preparing to unpack .../01-libasound2-data_1.2.11-1build2_all.deb ...
+Unpacking libasound2-data (1.2.11-1build2) ...
+Selecting previously unselected package libasound2t64:amd64.
+Preparing to unpack .../02-libasound2t64_1.2.11-1build2_amd64.deb ...
+Unpacking libasound2t64:amd64 (1.2.11-1build2) ...
+Selecting previously unselected package alsa-ucm-conf.
+Preparing to unpack .../03-alsa-ucm-conf_1.2.10-1ubuntu5.4_all.deb ...
+Unpacking alsa-ucm-conf (1.2.10-1ubuntu5.4) ...
+Selecting previously unselected package ca-certificates-java.
+Preparing to unpack .../04-ca-certificates-java_20240118_all.deb ...
+Unpacking ca-certificates-java (20240118) ...
+Selecting previously unselected package java-common.
+Preparing to unpack .../05-java-common_0.75+exp1_all.deb ...
+Unpacking java-common (0.75+exp1) ...
+Selecting previously unselected package libnspr4:amd64.
+Preparing to unpack .../06-libnspr4_2%3a4.35-1.1build1_amd64.deb ...
+Unpacking libnspr4:amd64 (2:4.35-1.1build1) ...
+Selecting previously unselected package libnss3:amd64.
+Preparing to unpack .../07-libnss3_2%3a3.98-1build1_amd64.deb ...
+Unpacking libnss3:amd64 (2:3.98-1build1) ...
+Selecting previously unselected package libpcsclite1:amd64.
+Preparing to unpack .../08-libpcsclite1_2.0.3-1build1_amd64.deb ...
+Unpacking libpcsclite1:amd64 (2.0.3-1build1) ...
+Selecting previously unselected package openjdk-21-jre-headless:amd64.
+Preparing to unpack .../09-openjdk-21-jre-headless_21.0.6+7-1~24.04.1_amd64.deb ...
+Unpacking openjdk-21-jre-headless:amd64 (21.0.6+7-1~24.04.1) ...
+Selecting previously unselected package openjdk-21-jdk-headless:amd64.
+Preparing to unpack .../10-openjdk-21-jdk-headless_21.0.6+7-1~24.04.1_amd64.deb ...
+Unpacking openjdk-21-jdk-headless:amd64 (21.0.6+7-1~24.04.1) ...
+Setting up java-common (0.75+exp1) ...
+Setting up libasound2-data (1.2.11-1build2) ...
+Setting up libasound2t64:amd64 (1.2.11-1build2) ...
+Setting up libnspr4:amd64 (2:4.35-1.1build1) ...
+Setting up libpcsclite1:amd64 (2.0.3-1build1) ...
+Setting up alsa-topology-conf (1.2.5.1-2) ...
+Setting up ca-certificates-java (20240118) ...
+No JRE found. Skipping Java certificates setup.
+Setting up alsa-ucm-conf (1.2.10-1ubuntu5.4) ...
+Setting up libnss3:amd64 (2:3.98-1build1) ...
+Setting up openjdk-21-jre-headless:amd64 (21.0.6+7-1~24.04.1) ...
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/java to provide /usr/bin/java (java) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/jpackage to provide /usr/bin/jpackage (jpackage) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/keytool to provide /usr/bin/keytool (keytool) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/rmiregistry to provide /usr/bin/rmiregistry (rmiregistry) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/lib/jexec to provide /usr/bin/jexec (jexec) in auto mode
+Processing triggers for libc-bin (2.39-0ubuntu8.4) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+Processing triggers for ca-certificates-java (20240118) ...
+Adding debian:ACCVRAIZ1.pem
+Adding debian:AC_RAIZ_FNMT-RCM.pem
+Adding debian:AC_RAIZ_FNMT-RCM_SERVIDORES_SEGUROS.pem
+Adding debian:ANF_Secure_Server_Root_CA.pem
+Adding debian:Actalis_Authentication_Root_CA.pem
+Adding debian:AffirmTrust_Commercial.pem
+Adding debian:AffirmTrust_Networking.pem
+Adding debian:AffirmTrust_Premium.pem
+Adding debian:AffirmTrust_Premium_ECC.pem
+Adding debian:Amazon_Root_CA_1.pem
+Adding debian:Amazon_Root_CA_2.pem
+Adding debian:Amazon_Root_CA_3.pem
+Adding debian:Amazon_Root_CA_4.pem
+Adding debian:Atos_TrustedRoot_2011.pem
+Adding debian:Atos_TrustedRoot_Root_CA_ECC_TLS_2021.pem
+Adding debian:Atos_TrustedRoot_Root_CA_RSA_TLS_2021.pem
+Adding debian:Autoridad_de_Certificacion_Firmaprofesional_CIF_A62634068.pem
+Adding debian:BJCA_Global_Root_CA1.pem
+Adding debian:BJCA_Global_Root_CA2.pem
+Adding debian:Baltimore_CyberTrust_Root.pem
+Adding debian:Buypass_Class_2_Root_CA.pem
+Adding debian:Buypass_Class_3_Root_CA.pem
+Adding debian:CA_Disig_Root_R2.pem
+Adding debian:CFCA_EV_ROOT.pem
+Adding debian:COMODO_Certification_Authority.pem
+Adding debian:COMODO_ECC_Certification_Authority.pem
+Adding debian:COMODO_RSA_Certification_Authority.pem
+Adding debian:Certainly_Root_E1.pem
+Adding debian:Certainly_Root_R1.pem
+Adding debian:Certigna.pem
+Adding debian:Certigna_Root_CA.pem
+Adding debian:Certum_EC-384_CA.pem
+Adding debian:Certum_Trusted_Network_CA.pem
+Adding debian:Certum_Trusted_Network_CA_2.pem
+Adding debian:Certum_Trusted_Root_CA.pem
+Adding debian:CommScope_Public_Trust_ECC_Root-01.pem
+Adding debian:CommScope_Public_Trust_ECC_Root-02.pem
+Adding debian:CommScope_Public_Trust_RSA_Root-01.pem
+Adding debian:CommScope_Public_Trust_RSA_Root-02.pem
+Adding debian:Comodo_AAA_Services_root.pem
+Adding debian:D-TRUST_BR_Root_CA_1_2020.pem
+Adding debian:D-TRUST_EV_Root_CA_1_2020.pem
+Adding debian:D-TRUST_Root_Class_3_CA_2_2009.pem
+Adding debian:D-TRUST_Root_Class_3_CA_2_EV_2009.pem
+Adding debian:DigiCert_Assured_ID_Root_CA.pem
+Adding debian:DigiCert_Assured_ID_Root_G2.pem
+Adding debian:DigiCert_Assured_ID_Root_G3.pem
+Adding debian:DigiCert_Global_Root_CA.pem
+Adding debian:DigiCert_Global_Root_G2.pem
+Adding debian:DigiCert_Global_Root_G3.pem
+Adding debian:DigiCert_High_Assurance_EV_Root_CA.pem
+Adding debian:DigiCert_TLS_ECC_P384_Root_G5.pem
+Adding debian:DigiCert_TLS_RSA4096_Root_G5.pem
+Adding debian:DigiCert_Trusted_Root_G4.pem
+Adding debian:Entrust.net_Premium_2048_Secure_Server_CA.pem
+Adding debian:Entrust_Root_Certification_Authority.pem
+Adding debian:Entrust_Root_Certification_Authority_-_EC1.pem
+Adding debian:Entrust_Root_Certification_Authority_-_G2.pem
+Adding debian:Entrust_Root_Certification_Authority_-_G4.pem
+Adding debian:GDCA_TrustAUTH_R5_ROOT.pem
+Adding debian:GLOBALTRUST_2020.pem
+Adding debian:GTS_Root_R1.pem
+Adding debian:GTS_Root_R2.pem
+Adding debian:GTS_Root_R3.pem
+Adding debian:GTS_Root_R4.pem
+Adding debian:GlobalSign_ECC_Root_CA_-_R4.pem
+Adding debian:GlobalSign_ECC_Root_CA_-_R5.pem
+Adding debian:GlobalSign_Root_CA.pem
+Adding debian:GlobalSign_Root_CA_-_R3.pem
+Adding debian:GlobalSign_Root_CA_-_R6.pem
+Adding debian:GlobalSign_Root_E46.pem
+Adding debian:GlobalSign_Root_R46.pem
+Adding debian:Go_Daddy_Class_2_CA.pem
+Adding debian:Go_Daddy_Root_Certificate_Authority_-_G2.pem
+Adding debian:HARICA_TLS_ECC_Root_CA_2021.pem
+Adding debian:HARICA_TLS_RSA_Root_CA_2021.pem
+Adding debian:Hellenic_Academic_and_Research_Institutions_ECC_RootCA_2015.pem
+Adding debian:Hellenic_Academic_and_Research_Institutions_RootCA_2015.pem
+Adding debian:HiPKI_Root_CA_-_G1.pem
+Adding debian:Hongkong_Post_Root_CA_3.pem
+Adding debian:ISRG_Root_X1.pem
+Adding debian:ISRG_Root_X2.pem
+Adding debian:IdenTrust_Commercial_Root_CA_1.pem
+Adding debian:IdenTrust_Public_Sector_Root_CA_1.pem
+Adding debian:Izenpe.com.pem
+Adding debian:Microsec_e-Szigno_Root_CA_2009.pem
+Adding debian:Microsoft_ECC_Root_Certificate_Authority_2017.pem
+Adding debian:Microsoft_RSA_Root_Certificate_Authority_2017.pem
+Adding debian:NAVER_Global_Root_Certification_Authority.pem
+Adding debian:NetLock_Arany_=Class_Gold=_Főtanúsítvány.pem
+Adding debian:OISTE_WISeKey_Global_Root_GB_CA.pem
+Adding debian:OISTE_WISeKey_Global_Root_GC_CA.pem
+Adding debian:QuoVadis_Root_CA_1_G3.pem
+Adding debian:QuoVadis_Root_CA_2.pem
+Adding debian:QuoVadis_Root_CA_2_G3.pem
+Adding debian:QuoVadis_Root_CA_3.pem
+Adding debian:QuoVadis_Root_CA_3_G3.pem
+Adding debian:SSL.com_EV_Root_Certification_Authority_ECC.pem
+Adding debian:SSL.com_EV_Root_Certification_Authority_RSA_R2.pem
+Adding debian:SSL.com_Root_Certification_Authority_ECC.pem
+Adding debian:SSL.com_Root_Certification_Authority_RSA.pem
+Adding debian:SSL.com_TLS_ECC_Root_CA_2022.pem
+Adding debian:SSL.com_TLS_RSA_Root_CA_2022.pem
+Adding debian:SZAFIR_ROOT_CA2.pem
+Adding debian:Sectigo_Public_Server_Authentication_Root_E46.pem
+Adding debian:Sectigo_Public_Server_Authentication_Root_R46.pem
+Adding debian:SecureSign_RootCA11.pem
+Adding debian:SecureTrust_CA.pem
+Adding debian:Secure_Global_CA.pem
+Adding debian:Security_Communication_ECC_RootCA1.pem
+Adding debian:Security_Communication_RootCA2.pem
+Adding debian:Security_Communication_RootCA3.pem
+Adding debian:Security_Communication_Root_CA.pem
+Adding debian:Starfield_Class_2_CA.pem
+Adding debian:Starfield_Root_Certificate_Authority_-_G2.pem
+Adding debian:Starfield_Services_Root_Certificate_Authority_-_G2.pem
+Adding debian:SwissSign_Gold_CA_-_G2.pem
+Adding debian:SwissSign_Silver_CA_-_G2.pem
+Adding debian:T-TeleSec_GlobalRoot_Class_2.pem
+Adding debian:T-TeleSec_GlobalRoot_Class_3.pem
+Adding debian:TUBITAK_Kamu_SM_SSL_Kok_Sertifikasi_-_Surum_1.pem
+Adding debian:TWCA_Global_Root_CA.pem
+Adding debian:TWCA_Root_Certification_Authority.pem
+Adding debian:TeliaSonera_Root_CA_v1.pem
+Adding debian:Telia_Root_CA_v2.pem
+Adding debian:TrustAsia_Global_Root_CA_G3.pem
+Adding debian:TrustAsia_Global_Root_CA_G4.pem
+Adding debian:Trustwave_Global_Certification_Authority.pem
+Adding debian:Trustwave_Global_ECC_P256_Certification_Authority.pem
+Adding debian:Trustwave_Global_ECC_P384_Certification_Authority.pem
+Adding debian:TunTrust_Root_CA.pem
+Adding debian:UCA_Extended_Validation_Root.pem
+Adding debian:UCA_Global_G2_Root.pem
+Adding debian:USERTrust_ECC_Certification_Authority.pem
+Adding debian:USERTrust_RSA_Certification_Authority.pem
+Adding debian:XRamp_Global_CA_Root.pem
+Adding debian:certSIGN_ROOT_CA.pem
+Adding debian:certSIGN_Root_CA_G2.pem
+Adding debian:e-Szigno_Root_CA_2017.pem
+Adding debian:ePKI_Root_Certification_Authority.pem
+Adding debian:emSign_ECC_Root_CA_-_C3.pem
+Adding debian:emSign_ECC_Root_CA_-_G3.pem
+Adding debian:emSign_Root_CA_-_C1.pem
+Adding debian:emSign_Root_CA_-_G1.pem
+Adding debian:vTrus_ECC_Root_CA.pem
+Adding debian:vTrus_Root_CA.pem
+done.
+Setting up openjdk-21-jdk-headless:amd64 (21.0.6+7-1~24.04.1) ...
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/jar to provide /usr/bin/jar (jar) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/jarsigner to provide /usr/bin/jarsigner (jarsigner) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/javac to provide /usr/bin/javac (javac) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/javadoc to provide /usr/bin/javadoc (javadoc) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/javap to provide /usr/bin/javap (javap) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/jcmd to provide /usr/bin/jcmd (jcmd) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/jdb to provide /usr/bin/jdb (jdb) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/jdeprscan to provide /usr/bin/jdeprscan (jdeprscan) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/jdeps to provide /usr/bin/jdeps (jdeps) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/jfr to provide /usr/bin/jfr (jfr) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/jimage to provide /usr/bin/jimage (jimage) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/jinfo to provide /usr/bin/jinfo (jinfo) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/jlink to provide /usr/bin/jlink (jlink) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/jmap to provide /usr/bin/jmap (jmap) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/jmod to provide /usr/bin/jmod (jmod) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/jps to provide /usr/bin/jps (jps) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/jrunscript to provide /usr/bin/jrunscript (jrunscript) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/jshell to provide /usr/bin/jshell (jshell) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/jstack to provide /usr/bin/jstack (jstack) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/jstat to provide /usr/bin/jstat (jstat) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/jstatd to provide /usr/bin/jstatd (jstatd) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/jwebserver to provide /usr/bin/jwebserver (jwebserver) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/serialver to provide /usr/bin/serialver (serialver) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-openjdk-amd64/bin/jhsdb to provide /usr/bin/jhsdb (jhsdb) in auto mode
+bvimit@IMITNM-DES-0020:~/mansi36$ java --version
+openjdk 21.0.6 2025-01-21
+OpenJDK Runtime Environment (build 21.0.6+7-Ubuntu-124.04.1)
+OpenJDK 64-Bit Server VM (build 21.0.6+7-Ubuntu-124.04.1, mixed mode, sharing)
+bvimit@IMITNM-DES-0020:~/mansi36$ sudo apt install openjdk-21-jre-headless
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+openjdk-21-jre-headless is already the newest version (21.0.6+7-1~24.04.1).
+openjdk-21-jre-headless set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+bvimit@IMITNM-DES-0020:~/mansi36$ javac --version
+javac 21.0.6
+bvimit@IMITNM-DES-0020:~/mansi36$ vi HelloWorld.java
+bvimit@IMITNM-DES-0020:~/mansi36$ cat HelloWorld.java
+class HelloWorld{
+        public static void main (String[] args)
+        {
+                System.out.println("Hello World!!");
+        }
+}
+
+bvimit@IMITNM-DES-0020:~/mansi36$ vi javaplaybook.yml
+bvimit@IMITNM-DES-0020:~/mansi36$ vi javaplaybook.yml
+bvimit@IMITNM-DES-0020:~/mansi36$ ansible-playbook javaplaybook.yml
+
+PLAY [Run Java Program Using Ansible] **********************************************************************************************************************
+
+TASK [Compile Java Program] ********************************************************************************************************************************
+changed: [localhost]
+
+TASK [Run Java Program] ************************************************************************************************************************************
+changed: [localhost]
+
+TASK [Display Java Program Output] *************************************************************************************************************************
+ok: [localhost] => {
+    "msg": "Hello World!!"
+}
+
+PLAY RECAP *************************************************************************************************************************************************
+localhost                  : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+
+bvimit@IMITNM-DES-0020:~/mansi36$ vi javaplaybook.yml
+bvimit@IMITNM-DES-0020:~/mansi36$ vi javaplaybook.yml
+bvimit@IMITNM-DES-0020:~/mansi36$

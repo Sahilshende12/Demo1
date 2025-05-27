@@ -1,0 +1,144 @@
+Microsoft Windows [Version 10.0.26100.3775]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Admin> cd C:\simple-java-maven-app
+
+C:\simple-java-maven-app>mvn clean package
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ----------------------< com.mycompany.app:my-app >----------------------
+[INFO] Building my-app 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- clean:3.2.0:clean (default-clean) @ my-app ---
+[INFO] Deleting C:\simple-java-maven-app\target
+[INFO]
+[INFO] --- enforcer:3.5.0:enforce (enforce-maven) @ my-app ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] Rule 1: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[INFO]
+[INFO] --- resources:3.3.1:resources (default-resources) @ my-app ---
+[INFO] skip non existing resourceDirectory C:\simple-java-maven-app\src\main\resources
+[INFO]
+[INFO] --- compiler:3.14.0:compile (default-compile) @ my-app ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 1 source file with javac [debug release 17] to target\classes
+[INFO]
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ my-app ---
+[INFO] skip non existing resourceDirectory C:\simple-java-maven-app\src\test\resources
+[INFO]
+[INFO] --- compiler:3.14.0:testCompile (default-testCompile) @ my-app ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug release 17] to target\test-classes
+[INFO]
+[INFO] --- surefire:3.2.5:test (default-test) @ my-app ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO]
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.mycompany.app.AppTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.039 s -- in com.mycompany.app.AppTest
+[INFO]
+[INFO] Results:
+[INFO]
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+[INFO]
+[INFO]
+[INFO] --- jar:3.4.2:jar (default-jar) @ my-app ---
+[INFO] Building jar: C:\simple-java-maven-app\target\my-app-1.0-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.533 s
+[INFO] Finished at: 2025-04-17T16:02:47+05:30
+[INFO] ------------------------------------------------------------------------
+
+C:\simple-java-maven-app>rename DockerFile.txt DockerFile
+
+C:\simple-java-maven-app>docker build -t simple-java-maven-app
+ERROR: "docker buildx build" requires exactly 1 argument.
+See 'docker buildx build --help'.
+
+Usage:  docker buildx build [OPTIONS] PATH | URL | -
+
+Start a build
+
+C:\simple-java-maven-app>docker build -t simple-java-maven-app .
+[+] Building 0.1s (1/1) FINISHED                                                                   docker:desktop-linux
+ => [internal] load build definition from Dockerfile                                                               0.0s
+ => => transferring dockerfile: 2B                                                                                 0.0s
+ERROR: failed to solve: failed to read dockerfile: open Dockerfile: no such file or directory
+
+C:\simple-java-maven-app>rename DockerFile.txt Dockerfile
+The system cannot find the file specified.
+
+C:\simple-java-maven-app>docker build -t simple-java-maven-app .
+[+] Building 0.1s (1/1) FINISHED                                                                   docker:desktop-linux
+ => [internal] load build definition from Dockerfile                                                               0.0s
+ => => transferring dockerfile: 153B                                                                               0.0s
+Dockerfile:2
+--------------------
+   1 |     FROM openjdk:17-jdk-slim
+   2 | >>> WORKDIR/app
+   3 |     COPY target/*.jar app.jar
+   4 |     EXPOSE 8080
+--------------------
+ERROR: failed to solve: dockerfile parse error on line 2: unknown instruction: WORKDIR/app
+
+C:\simple-java-maven-app>docker build -t simple-java-maven-app .
+[+] Building 185.1s (9/9) FINISHED                                                                 docker:desktop-linux
+ => [internal] load build definition from Dockerfile                                                               0.0s
+ => => transferring dockerfile: 155B                                                                               0.0s
+ => [internal] load metadata for docker.io/library/openjdk:17-jdk-slim                                             2.6s
+ => [auth] library/openjdk:pull token for registry-1.docker.io                                                     0.0s
+ => [internal] load .dockerignore                                                                                  0.0s
+ => => transferring context: 2B                                                                                    0.0s
+ => [1/3] FROM docker.io/library/openjdk:17-jdk-slim@sha256:aaa3b3cb27e3e520b8f116863d0580c438ed55ecfa0bc126b41  182.0s
+ => => resolve docker.io/library/openjdk:17-jdk-slim@sha256:aaa3b3cb27e3e520b8f116863d0580c438ed55ecfa0bc126b41f6  0.0s
+ => => sha256:44d3aa8d076675d49d85180b0ced9daef210fe4fdff4bdbb422b9cf384e591d0 1.58MB / 1.58MB                     0.5s
+ => => sha256:6ce99fdf16e86bd02f6ad66a0e1334878528b5a4b5487850a76e0c08a7a27d56 187.90MB / 187.90MB               180.5s
+ => => sha256:1fe172e4850f03bb45d41a20174112bc119fbfec42a650edbbd8491aee32e3c3 31.38MB / 31.38MB                  63.5s
+ => => extracting sha256:1fe172e4850f03bb45d41a20174112bc119fbfec42a650edbbd8491aee32e3c3                          0.7s
+ => => extracting sha256:44d3aa8d076675d49d85180b0ced9daef210fe4fdff4bdbb422b9cf384e591d0                          0.1s
+ => => extracting sha256:6ce99fdf16e86bd02f6ad66a0e1334878528b5a4b5487850a76e0c08a7a27d56                          1.4s
+ => [internal] load build context                                                                                  0.1s
+ => => transferring context: 2.83kB                                                                                0.1s
+ => [2/3] WORKDIR /app                                                                                             0.1s
+ => [3/3] COPY target/*.jar app.jar                                                                                0.0s
+ => exporting to image                                                                                             0.2s
+ => => exporting layers                                                                                            0.1s
+ => => exporting manifest sha256:e686eea6062053c2210d4f437b1d1ed8cb151a24989958d32f26eb8f2ba65e3e                  0.0s
+ => => exporting config sha256:1d3c170bf323f42f9c6cc31bf8e3f4dca3fbb9c53f175542a43f48e627dcd5f8                    0.0s
+ => => exporting attestation manifest sha256:9478ad0cd68caeafa2796c4bc8a8ed3eaa9abe916ab946e877e3783efb8d0969      0.0s
+ => => exporting manifest list sha256:15d4dff8a5dabf9b4dad64b5af9131ab8555867b7c484480a2fd7a5f58640ce6             0.0s
+ => => naming to docker.io/library/simple-java-maven-app:latest                                                    0.0s
+ => => unpacking to docker.io/library/simple-java-maven-app:latest                                                 0.0s
+
+C:\simple-java-maven-app>docker login
+Authenticating with existing credentials...
+Login Succeeded
+
+C:\simple-java-maven-app>docker tag simple-java-maven-app mansi2004patil/simple-java-maven-app:latest
+
+C:\simple-java-maven-app>docker images
+REPOSITORY                             TAG       IMAGE ID       CREATED         SIZE
+simple-java-maven-app                  latest    15d4dff8a5da   4 minutes ago   642MB
+mansi2004patil/simple-java-maven-app   latest    15d4dff8a5da   4 minutes ago   642MB
+<none>                                 <none>    0e6313ea470f   4 weeks ago     117MB
+nginx                                  latest    124b44bfc9cc   2 months ago    279MB
+ubuntu                                 latest    72297848456d   2 months ago    117MB
+hello-world                            latest    7e1a4e2d11e2   2 months ago    20.4kB
+
+C:\simple-java-maven-app>docker push mansi2004patil/simple-java-maven-app:latest
+The push refers to repository [docker.io/mansi2004patil/simple-java-maven-app]
+52b912cd6ad6: Pushed
+1bc67afcad18: Pushed
+44d3aa8d0766: Pushed
+6ce99fdf16e8: Pushed
+1fe172e4850f: Pushed
+ff6cc5c91e55: Pushed
+latest: digest: sha256:15d4dff8a5dabf9b4dad64b5af9131ab8555867b7c484480a2fd7a5f58640ce6 size: 856
+
+C:\simple-java-maven-app>
